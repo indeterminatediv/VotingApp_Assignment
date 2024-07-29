@@ -1,0 +1,20 @@
+Fallowing are the steps that we will take to find out the issue:
+
+Step1:   kubectl get replicaset <replica-set-name>
+         kubectl get pods -l app=<label-selector>
+
+Step2:   kubectl describe pod <pod-name>
+         kubectl logs <pod-name>
+
+Step3:   kubectl get svc <service-name>
+         kubectl describe svc <service-name>
+
+Step4:   kubectl get networkpolicies
+
+Step5:   kubectl get nodes -o wide
+
+Step6:   kubectl describe svc <service-name>
+         kubectl describe pod <pod-name>
+
+
+

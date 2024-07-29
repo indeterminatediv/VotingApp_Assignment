@@ -1,0 +1,16 @@
+Steps needed to update a container's image using deployment, making sure that there is zero downtime:
+
+Step1: kubectl get deployment <deployment-name> -o yaml
+
+Step2: kubectl set image deployment/<deployment_name> <container_name>=<new_image>:latest
+
+Step3: kubectl rollout status deployment/<deployment_name>
+
+Step4: kubectl get pods -l app=<label_selector>
+
+Step5: kubectl rollout undo deployment/<deployment_name>
+
+These steps will ensure a smooth update of the container's image with zero downtime.
+
+
+

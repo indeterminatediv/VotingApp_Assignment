@@ -1,1 +1,5 @@
+Common use-case, where you will use a daemon set instead of replica set:
 
+A common use-case for using a DaemonSet instead of a ReplicaSet is when you need to ensure that a specific type of pod runs on every node in your Kubernetes cluster. 
+For example, you might use a DaemonSet to deploy a logging agent or monitoring agent that collects logs or metrics from each node in the cluster.
+This way, every node will always have one instance of the agent running, regardless of how many nodes are in the cluster.
